@@ -8,13 +8,13 @@ eleventyExcludeFromCollections: true
 
 ## Key pages
 
-- [Home (English)]({{ site.url }}/)
-- [Home (Español)]({{ site.url }}/es/)
-- [Home (日本語)]({{ site.url }}/ja/)
-- [Guides]({{ site.url }}/guides/): practical guides on Japanese visas, immigration, and nationality
+- [Home (English)]({{ site.url }}{{ '/' | url }})
+- [Home (Español)]({{ site.url }}{{ '/es/' | url }})
+- [Home (日本語)]({{ site.url }}{{ '/ja/' | url }})
+- [Guides]({{ site.url }}{{ '/guides/' | url }}): practical guides on Japanese visas, immigration, and nationality
 
 ## Latest guides (English)
 
 {% for g in collections.guidesEn | limit(20) -%}
-- [{{ g.data.title }}]({{ site.url }}{{ g.url }}): {{ g.data.description }}
+- [{{ g.data.title }}]({{ site.url }}{{ g.url | url }}): {{ g.data.description }}
 {% endfor %}
