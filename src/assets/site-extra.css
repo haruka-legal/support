@@ -1,0 +1,44 @@
+/* ── Language switch (replaces old dropdown) ── */
+.lang-switch{display:flex;align-items:center;gap:2px;margin-right:14px;}
+.lang-switch a{
+  font-size:11px;font-weight:600;letter-spacing:.03em;color:rgba(255,255,255,.45);
+  padding:6px 9px;border-radius:5px;text-decoration:none;transition:.15s;
+}
+.lang-switch a:hover{color:#fff;}
+.lang-switch a.active{background:rgba(255,255,255,.12);color:#fff;}
+.mobile-nav-langs{display:flex;gap:8px;margin-top:18px;}
+.mobile-nav-langs a{
+  flex:1;text-align:center;padding:10px 0;border-radius:6px;
+  background:rgba(255,255,255,.06);color:rgba(255,255,255,.6);
+  font-size:12px;font-weight:600;text-decoration:none;border:none;
+}
+.mobile-nav-langs a.active{background:#fff;color:var(--navy);}
+
+/* ── Site notice banner ── */
+.site-notice{background:var(--pale);border-bottom:1px solid var(--border);padding:10px 0;text-align:center;}
+.site-notice .wrap{max-width:1100px;margin:0 auto;padding:0 24px;font-size:12px;color:var(--mid);}
+
+/* ── Guides list ── */
+.guides-list{padding:64px 0 90px;}
+.guide-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;margin-top:34px;}
+.guide-card{
+  display:block;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);
+  padding:26px;text-decoration:none;transition:.2s;box-shadow:var(--shadow);
+}
+.guide-card:hover{transform:translateY(-2px);}
+.guide-card-date{font-size:11px;color:var(--light);letter-spacing:.03em;}
+.guide-card h2{font-size:17px;color:var(--ink);margin:10px 0 8px;line-height:1.4;font-weight:600;}
+.guide-card p{font-size:13px;color:var(--mid);line-height:1.6;}
+
+/* ── Guide article ── */
+.guide-article{padding:56px 0 100px;}
+.guide-wrap{max-width:720px;margin:0 auto;padding:0 24px;}
+.guide-date{font-size:12px;color:var(--light);margin-bottom:14px;}
+.guide-title{font-family:"Cormorant Garamond",serif;font-size:clamp(28px,4vw,40px);color:var(--ink);line-height:1.25;margin-bottom:20px;}
+.guide-lede{font-size:17px;color:var(--mid);line-height:1.65;margin-bottom:32px;font-style:italic;border-left:3px solid var(--gold);padding-left:18px;}
+.guide-body{font-size:16px;line-height:1.85;color:var(--ink);}
+.guide-body h2{font-size:22px;margin:38px 0 14px;color:var(--navy);font-weight:600;}
+.guide-body p{margin-bottom:18px;}
+.guide-body ul{margin:0 0 18px 20px;}
+.guide-body li{margin-bottom:8px;}
+.guide-body strong{color:var(--navy);}

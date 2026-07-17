@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+lang: ja
+title: "お役立ち記事｜遥か行政書士事務所 HARUKA LEGAL SUPPORT"
+description: "在留資格・国籍に関する実用的な記事を、海外から日本の制度を調べている方向けに解説します。"
+altUrls:
+  en: /guides/
+  es: /es/guides/
+  ja: /ja/guides/
+pagination:
+  data: collections.guidesJa
+  size: 20
+  alias: guides
+---
+<section class="guides-list">
+  <div class="wrap">
+    <div class="sec-eyebrow">お役立ち記事</div>
+    <h1 class="sec-title">日本の制度をやさしく解説</h1>
+    <div class="guide-cards">
+      {% for g in guides %}
+      <a class="guide-card" href="{{ g.url }}">
+        <span class="guide-card-date">{{ g.data.date | dateJa }}</span>
+        <h2>{{ g.data.title }}</h2>
+        <p>{{ g.data.description }}</p>
+      </a>
+      {% else %}
+      <p>近日公開予定です。</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>

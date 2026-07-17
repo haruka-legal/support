@@ -1,0 +1,251 @@
+<section id="cases">
+<div class="cases-inner">
+<div class="sec-eyebrow">あなたのケースを選んでください</div>
+<h2 class="sec-title">
+
+
+あなたはどの<em>ケース</em>ですか？
+</h2>
+<p class="sec-lead">
+
+
+当てはまる状況を選んでください。必要な手続きと料金の目安をご案内します。
+</p>
+<div class="case-grid">
+<button class="case-btn" id="btn-employer" onclick="selectCase('employer')">
+<span style="display:block;color:var(--sky);margin-bottom:10px;line-height:1;"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20"><path d="M2 20h20M5 20V8l6 4V8l6 4V4h3v16"></path></svg></span>
+<div class="case-label">外国人を採用したい（企業向け）</div>
+<div class="case-sublabel">在留資格認定・特定技能・更新</div>
+</button>
+<button class="case-btn" id="btn-business" onclick="selectCase('business')">
+<span style="display:block;color:var(--sky);margin-bottom:10px;line-height:1;"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20"><rect height="14" rx="2" width="20" x="2" y="7"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path></svg></span>
+<div class="case-label">日本でビジネスを始めたい</div>
+<div class="case-sublabel">経営管理ビザ・会社設立</div>
+</button>
+<button class="case-btn" id="btn-work" onclick="selectCase('work')">
+<span style="display:block;color:var(--sky);margin-bottom:10px;line-height:1;"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20"><rect height="20" rx="1" width="18" x="3" y="2"></rect><path d="M9 22V12h6v10"></path><path d="M8 6h.01M16 6h.01M8 10h.01M16 10h.01M8 14h.01M16 14h.01"></path></svg></span>
+<div class="case-label">日本で生活・就労したい</div>
+<div class="case-sublabel">就労ビザ・在留資格申請</div>
+</button>
+<button class="case-btn" id="btn-marriage" onclick="selectCase('marriage')">
+<span style="display:block;color:var(--sky);margin-bottom:10px;line-height:1;"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></span>
+<div class="case-label">日本人と結婚した・する</div>
+<div class="case-sublabel">国際結婚・配偶者ビザ</div>
+</button>
+<button class="case-btn" id="btn-permanent" onclick="selectCase('permanent')">
+<span style="display:block;color:var(--sky);margin-bottom:10px;line-height:1;"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>
+<div class="case-label">永住・帰化したい</div>
+<div class="case-sublabel">永住許可・帰化申請</div>
+</button>
+<button class="case-btn" id="btn-family" onclick="selectCase('family')">
+<span style="display:block;color:var(--sky);margin-bottom:10px;line-height:1;"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+<div class="case-label">家族を呼び寄せたい</div>
+<div class="case-sublabel">家族滞在・呼び寄せ</div>
+</button>
+</div>
+<!-- DETAIL PANELS -->
+<div class="case-detail" id="detail-business">
+<div class="cd-inner">
+<div class="cd-left">
+<span class="cd-tag">日本でのビジネス</span>
+<h3 class="cd-title">日本でビジネスを始めたい</h3>
+<p class="cd-desc">会社設立から経営管理ビザの取得まで、パッケージで一括対応。書類ではなくビジネスに集中していただけます。</p>
+<div class="cd-items">
+<div class="cd-item"><div class="cd-dot"></div>経営管理ビザ申請</div>
+<div class="cd-item"><div class="cd-dot"></div>会社設立サポート（株式会社・合同会社）</div>
+<div class="cd-item"><div class="cd-dot"></div>事務所要件のアドバイス</div>
+<div class="cd-item"><div class="cd-dot"></div>経営管理ビザの更新</div>
+<div class="cd-item"><div class="cd-dot"></div>外国法人の日本支店設立</div>
+</div>
+</div>
+<div class="cd-right">
+<div>
+<div class="cd-fee-label">料金目安</div>
+<div class="cd-fee-val">¥110,000〜</div>
+<div class="cd-fee-sub">税込・案件により異なります</div>
+<div class="cd-fee-note">会社設立費用は別途。無料見積り対応。</div>
+</div>
+<div class="cd-pay">
+<div class="cd-pay-title">お支払いの流れ</div>
+<div class="pay-row"><div class="pay-num">1</div><div class="pay-text">着手金（ご依頼時）</div><div class="pay-pct">50%</div></div>
+<div class="pay-row"><div class="pay-num">2</div><div class="pay-text">残金（許可後）</div><div class="pay-pct">50%</div></div>
+</div>
+<div class="cd-ctas">
+<a class="cd-btn-line" href="https://lin.ee/S4eCRmb" rel="noopener" target="_blank">LINEで相談</a>
+<a class="cd-btn-wa" href="https://wa.me/819038581198" rel="noopener" target="_blank">WhatsAppで相談</a>
+</div>
+<div class="cd-note">ご連絡〜内容確認まで無料。初期調査は¥8,000〜。24時間以内にご返信します。</div>
+</div>
+</div>
+</div>
+<div class="case-detail" id="detail-work">
+<div class="cd-inner">
+<div class="cd-left">
+<span class="cd-tag">就労・生活</span>
+<h3 class="cd-title">日本で生活・就労したい</h3>
+<p class="cd-desc">就職・転職・更新まで、就労目的の在留資格手続きを一括サポートします。</p>
+<div class="cd-items">
+<div class="cd-item"><div class="cd-dot"></div>技術・人文知識・国際業務</div>
+<div class="cd-item"><div class="cd-dot"></div>高度専門職ポイント計算・申請</div>
+<div class="cd-item"><div class="cd-dot"></div>特定技能1号・2号</div>
+<div class="cd-item"><div class="cd-dot"></div>在留資格変更（留学→就労）</div>
+<div class="cd-item"><div class="cd-dot"></div>就労ビザ更新</div>
+</div>
+</div>
+<div class="cd-right">
+<div>
+<div class="cd-fee-label">料金目安</div>
+<div class="cd-fee-val">¥88,000〜</div>
+<div class="cd-fee-sub">税込</div>
+<div class="cd-fee-note">新規・変更・更新。内容により異なります。</div>
+</div>
+<div class="cd-pay">
+<div class="cd-pay-title">お支払いの流れ</div>
+<div class="pay-row"><div class="pay-num">1</div><div class="pay-text">着手金（ご依頼時）</div><div class="pay-pct">50%</div></div>
+<div class="pay-row"><div class="pay-num">2</div><div class="pay-text">残金（許可後）</div><div class="pay-pct">50%</div></div>
+</div>
+<div class="cd-ctas">
+<a class="cd-btn-line" href="https://lin.ee/S4eCRmb" rel="noopener" target="_blank">LINEで相談</a>
+<a class="cd-btn-wa" href="https://wa.me/819038581198" rel="noopener" target="_blank">WhatsAppで相談</a>
+</div>
+<div class="cd-note">ご連絡〜内容確認まで無料。初期調査は¥8,000〜。24時間以内にご返信します。</div>
+</div>
+</div>
+</div>
+<div class="case-detail" id="detail-marriage">
+<div class="cd-inner">
+<div class="cd-left">
+<span class="cd-tag">国際結婚</span>
+<h3 class="cd-title">日本人と結婚した・する</h3>
+<p class="cd-desc">婚姻届から配偶者ビザまで完全サポート。本国書類の取得もお手伝いします。</p>
+<div class="cd-items">
+<div class="cd-item"><div class="cd-dot"></div>日本での婚姻届提出サポート</div>
+<div class="cd-item"><div class="cd-dot"></div>本国書類取得・アポスティーユ</div>
+<div class="cd-item"><div class="cd-dot"></div>日本人の配偶者等ビザ</div>
+<div class="cd-item"><div class="cd-dot"></div>永住者の配偶者等ビザ</div>
+<div class="cd-item"><div class="cd-dot"></div>配偶者ビザ更新</div>
+</div>
+</div>
+<div class="cd-right">
+<div>
+<div class="cd-fee-label">料金目安</div>
+<div class="cd-fee-val">¥98,000〜</div>
+<div class="cd-fee-sub">税込</div>
+<div class="cd-fee-note">出身国・案件内容により異なります。</div>
+</div>
+<div class="cd-pay">
+<div class="cd-pay-title">お支払いの流れ</div>
+<div class="pay-row"><div class="pay-num">1</div><div class="pay-text">着手金（ご依頼時）</div><div class="pay-pct">50%</div></div>
+<div class="pay-row"><div class="pay-num">2</div><div class="pay-text">残金（許可後）</div><div class="pay-pct">50%</div></div>
+</div>
+<div class="cd-ctas">
+<a class="cd-btn-line" href="https://lin.ee/S4eCRmb" rel="noopener" target="_blank">LINEで相談</a>
+<a class="cd-btn-wa" href="https://wa.me/819038581198" rel="noopener" target="_blank">WhatsAppで相談</a>
+</div>
+<div class="cd-note">ご連絡〜内容確認まで無料。初期調査は¥8,000〜。24時間以内にご返信します。</div>
+</div>
+</div>
+</div>
+<div class="case-detail" id="detail-permanent">
+<div class="cd-inner">
+<div class="cd-left">
+<span class="cd-tag">永住・帰化</span>
+<h3 class="cd-title">永住許可・帰化申請</h3>
+<p class="cd-desc">永住権か帰化か、あなたの状況に合った最適な選択肢をご提案し、申請を全面サポートします。</p>
+<div class="cd-items">
+<div class="cd-item"><div class="cd-dot"></div>永住許可申請</div>
+<div class="cd-item"><div class="cd-dot"></div>帰化申請（日本国籍取得）</div>
+<div class="cd-item"><div class="cd-dot"></div>高度専門職ポイント計算</div>
+<div class="cd-item"><div class="cd-dot"></div>要件確認・申請戦略のご相談</div>
+<div class="cd-item"><div class="cd-dot"></div>必要書類の作成・申請代行</div>
+</div>
+</div>
+<div class="cd-right">
+<div>
+<div class="cd-fee-label">料金目安</div>
+<div class="cd-fee-val">¥120,000〜</div>
+<div class="cd-fee-sub">税込</div>
+<div class="cd-fee-note">書類一式作成込み。帰化は内容により異なります。</div>
+</div>
+<div class="cd-pay">
+<div class="cd-pay-title">お支払いの流れ</div>
+<div class="pay-row"><div class="pay-num">1</div><div class="pay-text">着手金（ご依頼時）</div><div class="pay-pct">50%</div></div>
+<div class="pay-row"><div class="pay-num">2</div><div class="pay-text">残金（許可後）</div><div class="pay-pct">50%</div></div>
+</div>
+<div class="cd-ctas">
+<a class="cd-btn-line" href="https://lin.ee/S4eCRmb" rel="noopener" target="_blank">LINEで相談</a>
+<a class="cd-btn-wa" href="https://wa.me/819038581198" rel="noopener" target="_blank">WhatsAppで相談</a>
+</div>
+<div class="cd-note">ご連絡〜内容確認まで無料。初期調査は¥8,000〜。24時間以内にご返信します。</div>
+</div>
+</div>
+</div>
+<div class="case-detail" id="detail-family">
+<div class="cd-inner">
+<div class="cd-left">
+<span class="cd-tag">家族の呼び寄せ</span>
+<h3 class="cd-title">家族を日本に呼び寄せたい</h3>
+<p class="cd-desc">大切なご家族を日本に呼び寄せるための在留資格申請を、書類準備から申請まで完全サポートします。</p>
+<div class="cd-items">
+<div class="cd-item"><div class="cd-dot"></div>家族滞在ビザ</div>
+<div class="cd-item"><div class="cd-dot"></div>定住者ビザ</div>
+<div class="cd-item"><div class="cd-dot"></div>在留資格認定証明書（CoE）申請</div>
+<div class="cd-item"><div class="cd-dot"></div>扶養家族ビザ更新</div>
+</div>
+</div>
+<div class="cd-right">
+<div>
+<div class="cd-fee-label">料金目安</div>
+<div class="cd-fee-val">¥55,000〜</div>
+<div class="cd-fee-sub">税込</div>
+<div class="cd-fee-note">お一人様ごと。内容により異なります。</div>
+</div>
+<div class="cd-pay">
+<div class="cd-pay-title">お支払いの流れ</div>
+<div class="pay-row"><div class="pay-num">1</div><div class="pay-text">着手金（ご依頼時）</div><div class="pay-pct">50%</div></div>
+<div class="pay-row"><div class="pay-num">2</div><div class="pay-text">残金（許可後）</div><div class="pay-pct">50%</div></div>
+</div>
+<div class="cd-ctas">
+<a class="cd-btn-line" href="https://lin.ee/S4eCRmb" rel="noopener" target="_blank">LINEで相談</a>
+<a class="cd-btn-wa" href="https://wa.me/819038581198" rel="noopener" target="_blank">WhatsAppで相談</a>
+</div>
+<div class="cd-note">ご連絡〜内容確認まで無料。初期調査は¥8,000〜。24時間以内にご返信します。</div>
+</div>
+</div>
+</div>
+<div class="case-detail" id="detail-employer">
+<div class="cd-inner">
+<div class="cd-left">
+<span class="cd-tag">企業向け</span>
+<h3 class="cd-title">外国人を採用したい（企業向け）</h3>
+<p class="cd-desc">外国人社員の採用・ビザ申請から更新まで、企業の外国人雇用をトータルサポートします。</p>
+<div class="cd-items">
+<div class="cd-item"><div class="cd-dot"></div>在留資格認定証明書（新規採用）</div>
+<div class="cd-item"><div class="cd-dot"></div>特定技能1号・2号</div>
+<div class="cd-item"><div class="cd-dot"></div>社員ビザ更新・変更手続き</div>
+<div class="cd-item"><div class="cd-dot"></div>外国人雇用コンプライアンス相談</div>
+<div class="cd-item"><div class="cd-dot"></div>複数名の場合はご相談ください</div>
+</div>
+</div>
+<div class="cd-right">
+<div>
+<div class="cd-fee-label">料金目安</div>
+<div class="cd-fee-val">¥98,000〜</div>
+<div class="cd-fee-sub">お一人様ごと・税込</div>
+<div class="cd-fee-note">法人請求可能。複数名は無料見積り。</div>
+</div>
+<div class="cd-pay">
+<div class="cd-pay-title">お支払いの流れ</div>
+<div class="pay-row"><div class="pay-num">1</div><div class="pay-text">着手金（ご依頼時）</div><div class="pay-pct">50%</div></div>
+<div class="pay-row"><div class="pay-num">2</div><div class="pay-text">残金（許可後）</div><div class="pay-pct">50%</div></div>
+</div>
+<div class="cd-ctas">
+<a class="cd-btn-line" href="https://lin.ee/S4eCRmb" rel="noopener" target="_blank">LINEで相談</a>
+<a class="cd-btn-wa" href="https://wa.me/819038581198" rel="noopener" target="_blank">WhatsAppで相談</a>
+</div>
+<div class="cd-note">ご連絡〜内容確認まで無料。初期調査は¥8,000〜。24時間以内にご返信します。</div>
+</div>
+</div>
+</div>
+</div>
+</section>

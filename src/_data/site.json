@@ -1,0 +1,18 @@
+{
+  "url": "https://haruka-legal.com",
+  "brandName": "HARUKA LEGAL SUPPORT",
+  "brandNameJa": "遥か行政書士事務所",
+  "logo": "/assets/images/logo.jpg",
+  "author": {
+    "name": "Kishi Haruka",
+    "org": "遥か行政書士事務所",
+    "location": "Kanda-Nishikicho, Chiyoda-ku, Tokyo"
+  },
+  "line": "https://line.me/R/ti/p/@haruka-legal",
+  "whatsapp": "https://wa.me/00000000000",
+  "notice": {
+    "en": "This office is currently in preparation and will formally open in August 2026.",
+    "es": "Esta oficina está actualmente en preparación y abrirá oficialmente en agosto de 2026.",
+    "ja": "現在開業準備中です。2026年8月に正式開業予定です。"
+  }
+}

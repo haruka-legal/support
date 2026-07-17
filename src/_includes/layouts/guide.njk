@@ -1,0 +1,46 @@
+---
+layout: layouts/base.njk
+isGuide: true
+---
+{% block head %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ title }}",
+  "description": "{{ description }}",
+  "datePublished": "{{ date | dateISO }}",
+  "dateModified": "{{ (updated or date) | dateISO }}",
+  "author": { "@type": "Organization", "name": "{{ site.brandName }}" },
+  "publisher": { "@type": "Organization", "name": "{{ site.brandName }}", "logo": { "@type": "ImageObject", "url": "{{ site.url }}{{ site.logo }}" } },
+  "mainEntityOfPage": "{{ site.url }}{{ page.url }}"
+}
+</script>
+{% if faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in faq %}
+    { "@type": "Question", "name": "{{ item.q }}", "acceptedAnswer": { "@type": "Answer", "text": "{{ item.a }}" } }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+{% endblock %}
+
+<article class="guide-article">
+  <div class="wrap guide-wrap">
+    <p class="guide-date">
+      {% if lang == 'en' %}{{ date | dateEn }}{% elif lang == 'es' %}{{ date | dateEs }}{% else %}{{ date | dateJa }}{% endif %}
+      {% if updated %} · {% if lang == 'en' %}Updated {{ updated | dateEn }}{% elif lang == 'es' %}Actualizado {{ updated | dateEs }}{% else %}更新: {{ updated | dateJa }}{% endif %}{% endif %}
+    </p>
+    <h1 class="guide-title">{{ title }}</h1>
+    {% if excerptText %}<p class="guide-lede">{{ excerptText }}</p>{% endif %}
+    <div class="guide-body">
+      {{ content | safe }}
+    </div>
+  </div>
+</article>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+{% if altUrls %}
+<link rel="alternate" hreflang="en" href="{{ site.url }}{{ altUrls.en }}">
+<link rel="alternate" hreflang="es" href="{{ site.url }}{{ altUrls.es }}">
+<link rel="alternate" hreflang="ja" href="{{ site.url }}{{ altUrls.ja }}">
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ altUrls.en }}">
+{% endif %}
+<meta property="og:type" content="{% if isGuide %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:site_name" content="{{ site.brandName }}">
+<meta property="og:locale" content="{% if lang == 'en' %}en_US{% elif lang == 'es' %}es_ES{% else %}ja_JP{% endif %}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/site-extra.css">
+<link rel="icon" href="/assets/images/logo.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "{{ site.brandName }}",
+  "alternateName": "{{ site.brandNameJa }}",
+  "url": "{{ site.url }}/",
+  "description": "{{ description }}",
+  "areaServed": "JP",
+  "priceRange": "¥¥",
+  "address": { "@type": "PostalAddress", "addressLocality": "{{ site.author.location }}", "addressCountry": "JP" }
+}
+</script>
+{% block head %}{% endblock %}
+</head>
+<body>
+<header>
+<div class="header-inner">
+<a class="logo" href="{% if lang == 'en' %}/{% elif lang == 'es' %}/es/{% else %}/ja/{% endif %}">
+<img alt="{{ site.brandName }}" src="/assets/images/logo.jpg">
+<div class="logo-name">
+{{ site.brandName }}
+<small>{% if lang == 'en' %}Visa · Immigration · Business Setup · Tokyo{% elif lang == 'es' %}Visa · Inmigración · Apertura de Negocio · Tokio{% else %}ビザ・在留資格・外国人雇用サポート{% endif %}</small>
+</div>
+</a>
+<nav>
+<ul>
+{% if lang == 'en' %}
+  <li><a href="/#cases">Who We Help</a></li>
+  <li><a href="/#fees">Fees</a></li>
+  <li><a href="/guides/">Guides</a></li>
+  <li><a href="/#profile">Message from CEO</a></li>
+  <li><a href="/#info">Contact</a></li>
+{% elif lang == 'es' %}
+  <li><a href="/es/#cases">A Quién Ayudamos</a></li>
+  <li><a href="/es/#fees">Honorarios</a></li>
+  <li><a href="/es/guides/">Guías</a></li>
+  <li><a href="/es/#profile">Mensaje del CEO</a></li>
+  <li><a href="/es/#info">Contacto</a></li>
+{% else %}
+  <li><a href="/ja/#cases">対象の方</a></li>
+  <li><a href="/ja/#fees">料金</a></li>
+  <li><a href="/ja/guides/">お役立ち記事</a></li>
+  <li><a href="/ja/#profile">代表挨拶</a></li>
+  <li><a href="/ja/#info">事務所案内</a></li>
+{% endif %}
+</ul>
+</nav>
+<div class="hdr-right">
+<div class="lang-switch">
+<a href="{{ altUrls.en if altUrls else '/' }}" class="{% if lang == 'en' %}active{% endif %}">EN</a>
+<a href="{{ altUrls.es if altUrls else '/es/' }}" class="{% if lang == 'es' %}active{% endif %}">ES</a>
+<a href="{{ altUrls.ja if altUrls else '/ja/' }}" class="{% if lang == 'ja' %}active{% endif %}">JP</a>
+</div>
+<button aria-label="Menu" class="hamburger" onclick="openMobileNav()"><span></span><span></span><span></span></button>
+</div>
+</div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+<button class="mobile-nav-close" onclick="closeMobileNav()">✕</button>
+{% if lang == 'en' %}
+  <a href="/#cases" onclick="closeMobileNav()">Who We Help</a>
+  <a href="/#fees" onclick="closeMobileNav()">Fees</a>
+  <a href="/guides/" onclick="closeMobileNav()">Guides</a>
+  <a href="/#profile" onclick="closeMobileNav()">Message from CEO</a>
+  <a href="/#info" onclick="closeMobileNav()">Contact</a>
+{% elif lang == 'es' %}
+  <a href="/es/#cases" onclick="closeMobileNav()">A Quién Ayudamos</a>
+  <a href="/es/#fees" onclick="closeMobileNav()">Honorarios</a>
+  <a href="/es/guides/" onclick="closeMobileNav()">Guías</a>
+  <a href="/es/#profile" onclick="closeMobileNav()">Mensaje del CEO</a>
+  <a href="/es/#info" onclick="closeMobileNav()">Contacto</a>
+{% else %}
+  <a href="/ja/#cases" onclick="closeMobileNav()">対象の方</a>
+  <a href="/ja/#fees" onclick="closeMobileNav()">料金</a>
+  <a href="/ja/guides/" onclick="closeMobileNav()">お役立ち記事</a>
+  <a href="/ja/#profile" onclick="closeMobileNav()">代表挨拶</a>
+  <a href="/ja/#info" onclick="closeMobileNav()">事務所案内</a>
+{% endif %}
+<div class="mobile-nav-langs">
+<a href="{{ altUrls.en if altUrls else '/' }}" class="{% if lang == 'en' %}active{% endif %}">EN</a>
+<a href="{{ altUrls.es if altUrls else '/es/' }}" class="{% if lang == 'es' %}active{% endif %}">ES</a>
+<a href="{{ altUrls.ja if altUrls else '/ja/' }}" class="{% if lang == 'ja' %}active{% endif %}">JP</a>
+</div>
+</div>
+
+{% if site.notice[lang] %}
+<div class="site-notice" role="status"><div class="wrap">{{ site.notice[lang] }}</div></div>
+{% endif %}
+
+<main id="main">
+{{ content | safe }}
+</main>
+
+<footer>
+<div class="foot-inner">
+<div style="display:flex;flex-direction:column;gap:6px;">
+<div>&copy; 2026 {{ site.brandName }} · {{ site.brandNameJa }}</div>
+<div style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.45);">
+<span>{{ site.author.location }}</span>
+</div>
+<div style="margin-top:4px;">
+<a href="https://haruka-legal.github.io/gyosei/" rel="noopener" target="_blank" style="color:rgba(255,255,255,.4);font-size:11px;">
+{% if lang == 'en' %}Japanese site (日本語版){% elif lang == 'es' %}Sitio en japonés (日本語版){% else %}日本語版サイトはこちら{% endif %}
+</a>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:16px;">
+<a href="https://haruka-legal.com" style="color:rgba(255,255,255,.3);">haruka-legal.com</a>
+</div>
+</div>
+</footer>
+<script src="/assets/main.js"></script>
+</body>
+</html>

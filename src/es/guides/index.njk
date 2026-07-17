@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+lang: es
+title: "Guías | HARUKA LEGAL SUPPORT"
+description: "Guías prácticas sobre visas japonesas, inmigración y nacionalidad — escritas para quienes gestionan el sistema de Japón desde el extranjero."
+altUrls:
+  en: /guides/
+  es: /es/guides/
+  ja: /ja/guides/
+pagination:
+  data: collections.guidesEs
+  size: 20
+  alias: guides
+---
+<section class="guides-list">
+  <div class="wrap">
+    <div class="sec-eyebrow">Guías</div>
+    <h1 class="sec-title">Guías prácticas para vivir en Japón</h1>
+    <div class="guide-cards">
+      {% for g in guides %}
+      <a class="guide-card" href="{{ g.url }}">
+        <span class="guide-card-date">{{ g.data.date | dateEs }}</span>
+        <h2>{{ g.data.title }}</h2>
+        <p>{{ g.data.description }}</p>
+      </a>
+      {% else %}
+      <p>Próximamente nuevas guías.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
