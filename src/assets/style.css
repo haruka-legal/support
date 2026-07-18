@@ -62,7 +62,7 @@ nav a{
   letter-spacing:.05em;border-radius:4px;transition:all .2s;white-space:nowrap;
 }
 nav a:hover{background:var(--light-bg);color:var(--navy)}
-.hdr-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.hdr-right{display:flex;align-items:center;gap:10px;flex-shrink:0;min-width:0}
 /* lbtn removed - using dropdown */
 .hdr-cta{
   background:var(--navy);color:#fff;
@@ -135,12 +135,13 @@ nav a:hover{background:var(--light-bg);color:var(--navy)}
 .mobile-nav-langs{
   display:flex;gap:10px;margin-top:24px;padding-top:24px;
 }
-.mobile-nav-langs button{
+.mobile-nav-langs button,.mobile-nav-langs a{
   padding:8px 20px;border-radius:4px;font-size:13px;font-weight:500;
   background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
   color:rgba(255,255,255,.7);cursor:pointer;letter-spacing:.06em;
+  text-decoration:none;display:inline-block;
 }
-.mobile-nav-langs button.active{background:#fff;color:var(--navy);}
+.mobile-nav-langs button.active,.mobile-nav-langs a.active{background:#fff;color:var(--navy);}
 
 /* ── HERO ── */
 .hero{
@@ -766,7 +767,7 @@ footer{background:#030a14;padding:22px 40px}
 
 @media(max-width:380px){
   h1.hero-title{font-size:30px}
-  .logo-name{display:none}
+  .logo-name{font-size:9px;letter-spacing:.02em;max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
   .case-grid{grid-template-columns:1fr}
   .ti{width:100%}
 }

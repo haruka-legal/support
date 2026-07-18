@@ -42,3 +42,13 @@
 .guide-body ul{margin:0 0 18px 20px;}
 .guide-body li{margin-bottom:8px;}
 .guide-body strong{color:var(--navy);}
+
+/* ── Header right side: prevent hamburger from being pushed off-screen ── */
+@media(max-width:1024px){
+  .lang-switch{gap:0;margin-right:6px;}
+  .lang-switch a{padding:6px 6px;font-size:10px;}
+  .hdr-right{gap:4px;}
+}
+@media(max-width:380px){
+  .lang-switch a{padding:5px 5px;font-size:9.5px;}
+}
