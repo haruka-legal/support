@@ -42,7 +42,7 @@
 <body>
 <header>
 <div class="header-inner">
-<a class="logo" href="{% if lang == 'en' %}/{% elif lang == 'es' %}/es/{% else %}/ja/{% endif %}">
+<a class="logo" href="{{ (('/' if lang == 'en' else ('/es/' if lang == 'es' else '/ja/'))) | url }}">
 <img alt="{{ site.brandName }}" src="{{ '/assets/images/logo.jpg' | url }}">
 <div class="logo-name">
 {{ site.brandName }}
