@@ -146,7 +146,7 @@ nav a:hover{background:var(--light-bg);color:var(--navy)}
 /* ── HERO ── */
 .hero{
   padding-top:0;min-height:100vh;
-  background:linear-gradient(155deg,rgba(4,13,26,0.88) 0%,rgba(7,22,40,0.82) 30%,rgba(10,32,68,0.80) 60%,rgba(13,42,88,0.82) 85%,rgba(15,48,104,0.88) 100%), url('https://images.pexels.com/photos/29275750/pexels-photo-29275750.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center center / cover no-repeat;
+  background:linear-gradient(155deg,rgba(4,13,26,0.88) 0%,rgba(7,22,40,0.82) 30%,rgba(10,32,68,0.80) 60%,rgba(13,42,88,0.82) 85%,rgba(15,48,104,0.88) 100%), url('../images/hero-earth.jpg') center center / cover no-repeat;
   position:relative;overflow:hidden;
   display:flex;align-items:center;
 }
